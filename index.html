@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>My Train</title>
+        <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+    </head>
+    <body>
+        <a-assets>
+            <!-- Preload -->
+            <a-asset-item id="train-obj" src="./assets/tinker.obj"></a-asset-item>
+            <a-asset-item id="train-mtl" src="./assets/obj.mtl"></a-asset-item>
+            <a-asset-item id="train-gltf" src="./assets/train.glb"></a-asset-item>
+        </a-assets>
+        <a-scene>
+            <a-camera position="0 4 13"></a-camera>
+            <!-- Models -->
+            <a-entity obj-model="obj: #train-obj; mtl: #train-mtl" position="2.3 -0.7 -6" rotation="-90 0 0" scale="0.18 0.18 0.18"></a-entity>
+            
+            <!-- Ground -->
+            <a-plane width="55" height="26" rotation="-90 0 0" position="0 -1.1 -6"
+                     src="https://raw.githubusercontent.com/shivjain123/Train_In_Dessert/master/dessert.jpg"
+            ></a-plane>
+
+            <!-- Sky -->
+            <a-plane width="70" height="22" position="0 9 -6"
+                src="https://raw.githubusercontent.com/shivjain123/Train_In_Dessert/master/sky.jpg">
+            </a-plane>
+        </a-scene>
+    </body>
+</html>
